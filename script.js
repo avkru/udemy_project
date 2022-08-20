@@ -24,6 +24,48 @@ for (let i = 0; i < 2; i++) {
   };
 };
 
+// Еще 2 вида циклов
+
+/*
+
+let i = 0;
+
+do {
+    let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+        b = +prompt("Во сколько обойдется?", "");
+
+  if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
+    console.log("done");
+    appData.expenses[a] = b;
+  } else if (a == null || b == null || a == '' || b == '') {
+        console.log("Произошла ошибка");
+  };
+
+    i++;
+} while (i < 2);
+
+*/
+
+/*
+
+let i = 0;
+
+while (i < 2) {
+    let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+        b = +prompt("Во сколько обойдется?", "");
+
+  if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
+    console.log("done");
+    appData.expenses[a] = b;
+  } else if (a == null || b == null || a == '' || b == '') {
+        console.log("Произошла ошибка");
+  };
+
+    i++;
+};
+
+*/
+
 appData.moneyPerDay = appData.budget / 30;
 
 alert("Ваш ежедневный бюджет: " + appData.moneyPerDay);
