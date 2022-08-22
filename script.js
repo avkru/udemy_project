@@ -19,7 +19,7 @@ for (let i = 0; i < 2; i++) {
   if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
     console.log("done");
     appData.expenses[a] = b;
-  } else if (a == null || b == null || a == '' || b == '') {
+  } else if (isFinite(b) || a == null || b == null || a == '' || b == '') {
     console.log("Произошла ошибка");
   };
 };
@@ -37,7 +37,7 @@ do {
   if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
     console.log("done");
     appData.expenses[a] = b;
-  } else if (a == null || b == null || a == '' || b == '') {
+  } else if (isFinite(b) || a == null || b == null || a == '' || b == '') {
         console.log("Произошла ошибка");
   };
 
@@ -57,7 +57,7 @@ while (i < 2) {
   if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
     console.log("done");
     appData.expenses[a] = b;
-  } else if (a == null || b == null || a == '' || b == '') {
+  } else if (isFinite(b) || a == null || b == null || a == '' || b == '') {
         console.log("Произошла ошибка");
   };
 
