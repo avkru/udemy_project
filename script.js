@@ -64,16 +64,32 @@ let appData = {
     }
   },
   chooseIncome: function() {
-    let items = prompt("Что принесет дополнительный доход? (Перечислите через запятую)", "");
+    let items;
+
+    for (let i = 0; i < 1; i++) {
+      items = prompt("Что принесет дополнительный доход? (Перечислите через запятую)", "");
+      
+      if ( typeof(items) === "string" && items != null && items != "" ) {
+        console.log("done");
+      } else {
+        i = i - 1;
+      }
+    }
+
     appData.income = items.split(", ");
     appData.income.push( prompt("Может что-то еще?") );
     appData.income.sort();
+    
+    
   }
 };
 
+
+/*
 appData.chooseExpenses();
 appData.detectDayBudget();
 appData.detectLevel();
 appData.checkSavings();
 appData.chooseOptExpenses();
 appData.chooseIncome();
+*/
