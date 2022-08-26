@@ -80,7 +80,10 @@ let appData = {
     appData.income.push( prompt("Может что-то еще?") );
     appData.income.sort();
     
-    
+    appData.income.forEach(function(item, i) {
+      i += 1;
+      alert( "Способы доп. заработка: " + i + ". " + item);
+    })
   }
 };
 
