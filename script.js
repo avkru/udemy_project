@@ -87,12 +87,15 @@ let appData = {
   }
 };
 
-
-/*
 appData.chooseExpenses();
 appData.detectDayBudget();
 appData.detectLevel();
 appData.checkSavings();
 appData.chooseOptExpenses();
 appData.chooseIncome();
-*/
+
+for (let key in appData) {
+  if (typeof appData[key] != "function") {
+    console.log("Наша программа включает в себя данные: " + "\n" + key + " = " + appData[key]);
+  };
+};
